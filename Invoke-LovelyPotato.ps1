@@ -35,7 +35,7 @@ https://github.com/TsukiCTF/Lovely-Potato
 	Start-Process -FilePath "cmd" -ArgumentList "/c $LocalPath\test_clsid.bat" -WorkingDirectory $LocalPath
 
 	# Find System CLSIDs
-	Start-Sleep -s 300
+	Start-Sleep -s 600
 	$SystemCLSID = type $LocalPath\result.log | findstr /i "system" | ForEach-Object {echo $_.split(";")[0]}
 
 	# Launch Juicy Potato
