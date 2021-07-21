@@ -38,10 +38,6 @@ Also, listing entire CLSIDs on the system and identifying privilege for each of 
 You can easily switch binaries in the repo any time without having to recode Invoke-LovelyPotato.ps1.
 Ex) Recompiling JuicyPotato for customization / Obfuscating your meterpreter for AV evasion
 
-## Demo
-Setting up & Testing Lovely Potato against HackTheBox machine (starting at 6:43)
-https://youtu.be/f-JDU0GlRIw?t=403 (the video got taken down and is in appeal process)
-
 
 [1]: https://github.com/ohpe/juicy-potato
 [2]: https://ci.appveyor.com/project/ohpe/juicy-potato/build/artifacts
