@@ -1,5 +1,6 @@
 # Lovely Potato (automating juicy potato)
 *Powershell wrapper of [Decoder's JuicyPotato][1] for easy exploitation. **This entirely depends on the [original Juicy Potato binary][2] and utilizes [his test_clsid.bat][3].***
+TL;DR: SeImpersonatePrivilege Is Enabled = JuicyPotato Exploitable
 
 ## Quick Guide
 First clone this repo to your attacker machine which already has all of required dependencies:
@@ -39,7 +40,7 @@ Ex) Recompiling JuicyPotato for customization / Obfuscating your meterpreter for
 
 ## Demo
 Setting up & Testing Lovely Potato against HackTheBox machine (starting at 6:43)
-https://youtu.be/f-JDU0GlRIw?t=403
+https://youtu.be/f-JDU0GlRIw?t=403 (the video got taken down and is in appeal process)
 
 
 [1]: https://github.com/ohpe/juicy-potato
